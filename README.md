@@ -2,7 +2,7 @@
 
 津南挑战赛2 基于faster R-Cnn 的x光机危险物品检测
 参赛时间比较匆忙，因为准备找实习，使用一块2080(缺卡真难受),前前后后一共搞了大约3-4天的样子，代码基于facebook开源的基于pytorch的maskrcnn.使用resNet50fpn作为backbone。参数没怎么调，训练了两天左右，目前模型还没有收敛到最优，初赛排名138/2130名，我在本地基于coco评测我自己划分的验证集的map的几个指标都非常高map0.5:0.9大约在0.8左右，但是和线上差距过大，线上不到0.4，目前还不清楚是什么原因，等待后续天池放出test_a的数据的标签再测试看看。除此之外还基于keras（刚开始队友使用keras实现的yolov3,所以我基于keras写了个二分类模型）实现的inceptionV3训练了一个二分类模型，主要用来分restircted和normal类别。二分类模型的效果非常好，在验证集上的分类准确率接近1，可能也是官方更换评价指标的原因。结合两个模型，可以把检测的结果提升几个点。
-![alt text](demo/COCO detections_screenshot_27.03.20191.png "from http://cocodataset.org/#explore?id=345434")
+![alt text](demo/demo2.png "from https://github.com/huaifeng1993/JinNanConpetition2/blob/master/demo/COCO%20detections_screenshot_27.03.20191.png")
 
 
 ## jingnan2  demo
